@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
+import styles from './app.css'
 
 export default class App extends Component {
   render () {
     return (
-      <div>Foo</div>
+      <div className={styles.container}>Foo</div>
     )
   }
 }

@@ -1,0 +1,10 @@
+.foo {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  composes: foo;
+  background: #666;
+  color: #fff;
+}
