@@ -18,7 +18,7 @@ const middleware = webpackMiddleware(compiler, {
 })
 
 const response = (req, res) => {
-  res.write(middleware.fileSystem.readFileSync(path.join(__dirname, 'dist/index.hmtl')))
+  res.write(middleware.fileSystem.readFileSync(path.join(__dirname, 'dist/index.html')))
   res.end()
 }
 
