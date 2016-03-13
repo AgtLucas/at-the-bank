@@ -17,14 +17,12 @@ const middleware = webpackMiddleware(compiler, {
   }
 })
 
-const response = (req, res) => {
-  res.write(middleware.fileSystem.readFileSync(path.join(__dirname, 'dist/index.html')))
-  res.end()
-}
-
 app.use(middleware)
 app.use(webpackHotMiddleware(compiler))
-app.get('*', response())
+app.get('*', function response (req, res) {
+  res.write(middleware.fileSystem.readFileSync(path.join(__dirname, 'dist/index.html')))
+  res.end()
+})
 
 app.listen(port, '0.0.0.0', function onStart (err) {
   if (err) {
