@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/AgtLucas/at-the-bank/issues"
   },
-  "homepage": "https://github.com/AgtLucas/at-the-bank#readme"
+  "homepage": "https://github.com/AgtLucas/at-the-bank#readme",
+  "devDependencies": {
+    "babel-core": "^6.7.2",
+    "babel-loader": "^6.2.4",
+    "webpack": "^1.12.14"
+  }
 }
